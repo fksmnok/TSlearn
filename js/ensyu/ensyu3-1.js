@@ -1,0 +1,23 @@
+"use strict";
+let maxAge;
+let ary = [
+    { name: 'abc', age: 10 },
+    { name: 'def', age: 18 },
+    { name: 'ghi', age: 5 },
+    { name: 'jkl', age: 22 },
+];
+function classifyPeopleByAge1(args, maxAge) {
+    let arr1 = [];
+    for (let i = 0; i < args.length; i++) {
+        if (args[i].age <= maxAge) {
+            arr1.push(args[i].name);
+        }
+    }
+    return arr1;
+}
+console.log(classifyPeopleByAge1([
+    { name: 'abc', age: 10 },
+    { name: 'def', age: 18 },
+    { name: 'ghi', age: 5 },
+    { name: 'jkl', age: 22 }
+], 18));
